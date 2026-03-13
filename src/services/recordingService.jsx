@@ -13,7 +13,8 @@ export const recordingService = {
 
       return {
         path: response.recording.filePath,
-        url: response.url,
+        url: response.url || response.public_url,
+        public_url: response.public_url || response.url,
         fileName: response.recording.fileName,
         recordingId: response.recording._id,
       };
